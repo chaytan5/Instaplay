@@ -1,15 +1,14 @@
 import React from "react";
 
 const VideoCard = ({ data }) => {
-	// console.log(data);
 	const { snippet, statistics } = data;
 	const { thumbnails, title, channelTitle } = snippet;
 	return (
-		<div className="w-[280px] h-auto cursor-pointer">
+		<div className="w-72 h-auto cursor-pointer mb-4">
 			<div>
 				<img
-					className="rounded-3xl"
-					src={thumbnails?.high?.url}
+					className="rounded-3xl w-full"
+					src={thumbnails?.medium?.url}
 					alt="thumbnail"
 				/>
 			</div>
