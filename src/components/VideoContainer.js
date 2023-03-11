@@ -17,7 +17,7 @@ const VideoContainer = () => {
 	}
 
 	return (
-		<div className="flex flex-row flex-wrap shrink gap-3">
+		<div className="flex flex-row flex-wrap shrink gap-4 w-full">
 			{videos?.map((video) => (
 				<Link to={`/watch?v=${video.id}`} key={video.id}>
 					<VideoCard data={video} />
