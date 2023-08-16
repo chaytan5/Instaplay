@@ -58,7 +58,7 @@ const Head = () => {
 				<a href="/">
 					<img
 						className="ml-5 h-6 cursor-pointer"
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+						src="instaplay.webp"
 						alt="youtube logo"
 					/>
 				</a>
