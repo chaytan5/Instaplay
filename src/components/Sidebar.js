@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 const NavItemList = [
 	{ name: "Home", path: "/" },
-	{ name: "Shorts", path: "/shorts" },
-	{ name: "Subscriptions", path: "/subs" },
-	{ name: "Music", path: "/music" },
-	{ name: "Sports", path: "/sports" },
-	{ name: "Watch Later", path: "/watch-later" },
-	{ name: "Watch Again", path: "/watch-again" },
+	{ name: "Shorts", path: "/#" },
+	{ name: "Subscriptions", path: "/#" },
+	{ name: "Music", path: "/#" },
+	{ name: "Sports", path: "/#" },
+	{ name: "Watch Later", path: "/#" },
+	{ name: "Watch Again", path: "/#" },
 ];
 
 const Sidebar = () => {

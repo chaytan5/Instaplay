@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { YOUTUBE_API_URL } from "../utils/constants";
+import { YOUTUBE_API_URL, YOUTUBE_SHORTS_API_URL } from "../utils/constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 

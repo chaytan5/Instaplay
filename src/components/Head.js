@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { YOUTUBE_SEARCH_API, search_sugg } from "../utils/constants";
 import { cacheResult } from "../utils/searchSlice";
 
 const Head = () => {
@@ -32,6 +32,7 @@ const Head = () => {
 		// console.log("api call - " + searchQuery);
 		const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
 		const json = await data.json();
+		console.log(json);
 		setSuggestions(json[1]);
 
 		// cache the new data from api call
@@ -51,8 +52,8 @@ const Head = () => {
 			<div className="flex flex-row gap-2 py-2 justify-between items-center">
 				<img
 					onClick={() => menuClickHandler()}
-					className="h-7 cursor-pointer"
-					src="https://cdn-icons-png.flaticon.com/512/883/883806.png"
+					className="w-8 cursor-pointer"
+					src="https://p7.hiclipart.com/preview/616/930/362/hamburger-button-computer-icons-menu-bar-line.jpg"
 					alt="hamburger icon"
 				/>
 				<a href="/">
