@@ -4,7 +4,7 @@ const VideoCard = ({ data }) => {
 	const { snippet, statistics } = data;
 	const { thumbnails, title, channelTitle } = snippet;
 	return (
-		<div className="w-[300px] w max-w-fit h-auto cursor-pointer mb-4">
+		<div className="max-w-[300px]  h-auto cursor-pointer mb-4">
 			<div>
 				<img
 					className="rounded-3xl w-full"

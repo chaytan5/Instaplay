@@ -48,10 +48,10 @@ const Head = () => {
 
 	return (
 		<>
-			<div className="flex flex-row p-2 justify-between items-center">
+			<div className="flex flex-row gap-2 py-2 justify-between items-center">
 				<img
 					onClick={() => menuClickHandler()}
-					className="h-10 cursor-pointer"
+					className="h-7 cursor-pointer"
 					src="https://cdn-icons-png.flaticon.com/512/883/883806.png"
 					alt="hamburger icon"
 				/>
@@ -59,7 +59,7 @@ const Head = () => {
 					<img
 						className="ml-5 h-6 cursor-pointer"
 						src="instaplay.webp"
-						alt="youtube logo"
+						alt="Instaplay logo"
 					/>
 				</a>
 

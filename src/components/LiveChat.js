@@ -4,11 +4,6 @@ import { addMessage } from "../utils/chatSlice";
 import { generateRandomMessage, generateRandomName } from "../utils/helper";
 import ChatMessage from "./ChatMessage";
 
-const message = {
-	name: "Chetan Arora",
-	message: "This is the live chat feature in my youtube app!",
-};
-
 const LiveChat = () => {
 	const dispatch = useDispatch();
 	const chatMessages = useSelector((store) => store.chat.messages);
@@ -18,18 +13,16 @@ const LiveChat = () => {
 	useEffect(() => {
 		const i = setInterval(() => {
 			// API polling
-			console.log("API polling");
-
 			dispatch(
 				addMessage({
 					name: generateRandomName(),
 					message: generateRandomMessage(),
 				})
 			);
+		}, 3500);
 
-			return () => clearInterval(i);
-		}, 4000);
-	}, []);
+		return () => clearInterval(i);
+	}, [dispatch]);
 
 	function submitHandler(e) {
 		e.preventDefault();
@@ -56,7 +49,7 @@ const LiveChat = () => {
 					<ChatMessage key={i} message={msg} />
 				))}
 			</div>
-			<form className="h-[10%] " onSubmit={(e) => submitHandler(e)}>
+			<form className="h-[10%]" onSubmit={(e) => submitHandler(e)}>
 				<input
 					className="w-[80%] h-full p-2 rounded-bl-xl border border-gray-500"
 					type="text"
